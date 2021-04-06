@@ -35,16 +35,14 @@ try:
         output.write("#\n")
         output.write("KELOMPOK " + str(i+1) + ", HARI: " + HARI[i] + "\n")
         output.write("-----------------------------------------------\n")
-        output.write("NO.\t| NAMA LENGKAP \t\t\t| NO.PC\n")
+        output.write("NO. | NAMA LENGKAP | NO.PC\n")
         output.write("-----------------------------------------------\n")
         for j in range(total_slot):
           if no_pc < total_slot / 2:
             no_pc += 1
-            tab = "\t\t"
           else:
             no_pc = 1
-            tab = "\t"
           nomor_urut += 1
-          output.write(str(j+1) + ". " + tab + kelompok[i][j] + "\t\t\t - PC: " + str(no_pc) + "\n")
+          output.write(str(j+1) + ". " + kelompok[i][j] + " - PC: " + str(no_pc) + "\n")
 except IOError as e:
   print(e)

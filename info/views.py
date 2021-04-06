@@ -7,7 +7,7 @@ from datetime import date
 today = date.today()
 
 class Lab1Viewset(viewsets.ModelViewSet):
-  queryset = Kelompok.objects.filter(ruangan="Lab. 1", tanggal__day=today.day)
+  queryset = Kelompok.objects.filter(ruangan="Lab. 1")
   serializer_class = Lab1Serializer
 
 class Lab2Viewset(viewsets.ModelViewSet):
